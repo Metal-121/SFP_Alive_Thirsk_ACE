@@ -1,0 +1,1 @@
+player setPos (getMarkerPos "EastBase_2");

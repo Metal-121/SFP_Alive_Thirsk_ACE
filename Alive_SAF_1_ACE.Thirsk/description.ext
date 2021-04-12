@@ -1,0 +1,51 @@
+/*
+ Sets the overall mission attributes, and defines some global entities that
+ will be available to other scripts
+ 
+ See Also:
+ * https://community.bistudio.com/wiki/Description.ext
+ * https://community.bistudio.com/wiki/Loading_Screens
+ * https://community.bistudio.com/wiki/Mission_Overview
+ * https://community.bistudio.com/wiki/Multiplayer_Game_Types
+ * https://community.bistudio.com/wiki/Arma_3_Mission_Parameters
+*/
+//////////--Author and Loadscreen information--//////////        -----> https://community.bistudio.com/wiki/Loading_Screens
+author = "Metal";
+onLoadIntro = “Thirsk Invasion”;
+OnLoadName = "Thirsk Invasion | A L i V E";
+OnLoadMission = “Leaders Use the Tablet in your inventory”;
+onLoadMissionTime = 1;
+loadScreen = "anrop_flag.paa";
+overviewText = “hejsna”;
+//////////--Game Mode--//////////        -----> http://community.bistudio.com/wiki/description.ext#Header_Class
+class header {
+	gametype = COOP;
+	minplayers = 1;
+	maxplayers = 35;
+	playerCountMultipleOf = 1;
+};
+
+respawn = 3;
+respawnDelay = 60;
+respawnOnStart = 0;
+respawnVehicleDelay = 300;
+// ******* Revive mode new *********
+/*
+reviveMode = 1; 
+reviveUnconsciousStateMode = 0;
+reviveRequiredTrait = 0; // 0: disabled - 1: enabled. Default: 0
+reviveRequiredItems = 2;// 0 - none, 1 - Medikit, 2 - Medikit or Firstaid pack
+//********/// ACE-MEDIC //////////////
+
+//////////--Start Time (Multiplayer Parameter)--//////////        -----> https://community.bistudio.com/wiki/Arma_3_Mission_Parameters
+class Params
+{
+	#define DAYTIMEHOUR_DEFAULT 19
+	#include "\a3\functions_f\Params\paramDaytimeHour.hpp"
+	#define VIEW_DISTANCE_MIN 1500
+	#define VIEW_DISTANCE_MAX 5000
+	#define VIEW_DISTANCE_DEFAULT 3000
+	#include "\a3\Functions_F_Heli\Params\paramViewDistance.hpp"
+
+    #include "\a3\Functions_F\Params\paramRevive.hpp"
+};
