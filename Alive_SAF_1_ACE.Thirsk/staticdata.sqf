@@ -1,64 +1,6 @@
 // My faction config
-/*
-B_SwedenArmy_WDL_typeMappings = [] call ALiVE_fnc_hashCreate;
+// CQB houses
 
-B_SwedenArmy_WDL_factionCustomGroups = [] call ALiVE_fnc_hashCreate;
-[B_SwedenArmy_WDL_factionCustomGroups,"Infantry", ["b_swedenarmy_infantry_infantry_section_wdl","b_swedenarmy_infantry_infantry_group_wdl","b_swedenarmy_infantry_infantry_section_at_wdl","b_swedenarmy_infantry_infantry_section_support_wdl","b_swedenarmy_infantry_infantry_section_engineers_wdl","b_swedenarmy_infantry_infantry_section_eod_wdl","b_swedenarmy_infantry_infantry_section_sentry_wdl","b_swedenarmy_infantry_infantry_section_recon_wdl","b_swedenarmy_infantry_infantry_section_aa_wdl","b_swedenarmy_infantry_infantry_recon_group_wdl","b_swedenarmy_infantry_recon_scouts_wdl","b_swedenarmy_infantry_assault_amfibie_section_wdl","b_swedenarmy_infantry_assault_amfibie_group_wdl"]] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_factionCustomGroups,"SpecOps", ["b_swedenarmy_specops_recon_group_wdl","b_swedenarmy_specops_recon_sentry_section_wdl","b_swedenarmy_specops_recon_scouts_wdl","b_swedenarmy_specops_weapons_section_wdl","b_swedenarmy_specops_sabotage_section_wdl","b_swedenarmy_specops_recon_eod_wdl","b_swedenarmy_specops_recon_support_section_wdl","b_swedenarmy_specops_attack_diving_team_wdl","b_bswedenarmywdl_specops_attack_diving_team_suface"]] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_factionCustomGroups,"Motorized", ["b_swedenarmy_motorized_weapons_section_wdl","b_swedenarmy_motorized_fire_section_wdl","b_swedenarmy_motorized_infantry_group_wdl","b_swedenarmy_motorized_recon_engineer_wdl","b_swedenarmy_motorized_combat_medic_wdl","b_swedenarmy_motorized_recon_sentry_wdl"]] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_factionCustomGroups,"Motorized_MTP", ["b_bswedenarmywdl_motorized_mtp_sabotage_section","b_bswedenarmywdl_motorized_mtp_uav_operators"]] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_factionCustomGroups,"Mechanized", ["b_swedenarmy_mechanized_mechanized_at_section_wdl","b_swedenarmy_mechanized_mechanized_recon_section_wdl","b_swedenarmy_mechanized_lkv90_section_wdl"]] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_factionCustomGroups,"Armored", ["b_swedenarmy_armored_strf90_group_wdl","b_swedenarmy_armored_mbt_group_wdl","b_swedenarmy_armored_mbt_section_wdl","b_swedenarmy_armored_strf90_section_wdl"]] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_factionCustomGroups,"Artillery", ["b_swedenarmy_artillery_grkbv_amos_group_wdl","b_swedenarmy_artillery_m4_scorcher_group_wdl","b_swedenarmy_artillery_grk_m84_group_wdl"]] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_factionCustomGroups,"Naval", ["b_swedenarmy_naval_strb90_section_wdl","b_swedenarmy_naval_strb90_rws_section_wdl"]] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_factionCustomGroups,"Air", ["b_bswedenarmywdl_air_airborne_infantry_group","b_bswedenarmywdl_air_airborne_recon_group","b_bswedenarmywdl_air_airborne_fire_team"]] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_factionCustomGroups,"Support", ["b_swedenarmy_motorized_mtp_support_section_at_wdl","b_swedenarmy_support_support_section_aa_wdl"]] call ALiVE_fnc_hashSet;
-
-B_SwedenArmy_WDL_mappings = [] call ALiVE_fnc_hashCreate;
-[B_SwedenArmy_WDL_mappings,"Side", "WEST"] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_mappings,"GroupSideName", "WEST"] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_mappings,"FactionName", "B_SwedenArmy_WDL"] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_mappings,"GroupFactionName", "B_SwedenArmy_WDL"] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_mappings,"GroupFactionTypes", B_SwedenArmy_WDL_typeMappings] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_mappings,"Groups", B_SwedenArmy_WDL_factionCustomGroups] call ALiVE_fnc_hashSet;
-
-[ALiVE_factionCustomMappings,"B_SwedenArmy_WDL", B_SwedenArmy_WDL_mappings] call ALiVE_fnc_hashSet;
-B_SwedenArmy_WDL_mappings = [] call ALiVE_fnc_hashCreate;
-[B_SwedenArmy_WDL_mappings,"Side", "WEST"] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_mappings,"GroupSideName", "WEST"] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_mappings,"FactionName", "B_SwedenArmy_WDL"] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_mappings,"GroupFactionName", "B_SwedenArmy_WDL"] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_mappings,"GroupFactionTypes", B_SwedenArmy_WDL_typeMappings] call ALiVE_fnc_hashSet;
-[B_SwedenArmy_WDL_mappings,"Groups", B_SwedenArmy_WDL_factionCustomGroups] call ALiVE_fnc_hashSet;
-
-[ALiVE_factionCustomMappings,"B_SwedenArmy_WDL", B_SwedenArmy_WDL_mappings] call ALiVE_fnc_hashSet;
-O_SLOArmy_WDL_typeMappings = [] call ALiVE_fnc_hashCreate;
-/////////
-O_SLOArmy_WDL_factionCustomGroups = [] call ALiVE_fnc_hashCreate;
-[O_SLOArmy_WDL_factionCustomGroups,"Infantry", ["o_sloarmy_infantry_infantry_squad_wdl","o_sloarmy_infantry_fireteam_wdl","o_sloarmy_infantry_antiair_team_wdl","o_sloarmy_infantry_antitank_team_wdl","o_sloarmy_infantry_support_team_wdl","o_sloarmy_infantry_sniper_team_wdl","o_sloarmy_infantry_sniper_team_ksvk_wdl","o_sloarmy_infantry_scout_team_wdl"]] call ALiVE_fnc_hashSet;
-[O_SLOArmy_WDL_factionCustomGroups,"SpecOps", ["o_sloarmy_specops_spetsnaz_team_wdl","o_sloarmy_specops_spetznas_scouts_wdl","o_sloarmy_specops_spetsnaz_nightoperators_wdl","o_sloarmy_specops_spetsnaz_sabotage_team_wdl","o_sloarmy_specops_spetsnaz_diving_sabotage_team_wdl","o_sloarmy_specops_diving_sabotage_team_wdl"]] call ALiVE_fnc_hashSet;
-[O_SLOArmy_WDL_factionCustomGroups,"Motorized", ["o_sloarmy_motorized_infantry_squad_wdl","o_sloarmy_motorized_qrf_team_wdl","o_sloarmy_motorized_scout_team_wdl"]] call ALiVE_fnc_hashSet;
-[O_SLOArmy_WDL_factionCustomGroups,"Motorized_MTP", ["o_sloarmy_motorized_mtp_infantry_team_wdl","o_sloarmy_motorized_mtp_scouts_wdl","o_sloarmy_motorized_mtp_search_team_wdl"]] call ALiVE_fnc_hashSet;
-[O_SLOArmy_WDL_factionCustomGroups,"Mechanized", ["o_sloarmy_mechanized_infantry_squad_wdl"]] call ALiVE_fnc_hashSet;
-[O_SLOArmy_WDL_factionCustomGroups,"Armored", ["o_sloarmy_armored_t72_team_wdl","o_sloarmy_armored_t90_team_wdl"]] call ALiVE_fnc_hashSet;
-[O_SLOArmy_WDL_factionCustomGroups,"Artillery", ["o_sloarmy_artillery_podnod_team_wdl","o_sloarmy_artillery_bm_21_team_wdl","o_sloarmy_artillery_d30_team_wdl"]] call ALiVE_fnc_hashSet;
-[O_SLOArmy_WDL_factionCustomGroups,"Naval", ["o_sloarmy_naval_patrol_team_wdl","o_sloarmy_naval_qrf_team_wdl"]] call ALiVE_fnc_hashSet;
-[O_SLOArmy_WDL_factionCustomGroups,"Air", ["o_sloarmy_air_airborne_qrf_team_wdl","o_sloarmy_air_airborn_infantry_team_wdl","o_sloarmy_air_airborne_sabotage_team_wdl"]] call ALiVE_fnc_hashSet;
-[O_SLOArmy_WDL_factionCustomGroups,"Support", ["o_sloarmy_support_support_team_wdl"]] call ALiVE_fnc_hashSet;
-
-O_SLOArmy_WDL_mappings = [] call ALiVE_fnc_hashCreate;
-[O_SLOArmy_WDL_mappings,"Side", "EAST"] call ALiVE_fnc_hashSet;
-[O_SLOArmy_WDL_mappings,"GroupSideName", "EAST"] call ALiVE_fnc_hashSet;
-[O_SLOArmy_WDL_mappings,"FactionName", "O_SLOArmy_WDL"] call ALiVE_fnc_hashSet;
-[O_SLOArmy_WDL_mappings,"GroupFactionName", "O_SLOArmy_WDL"] call ALiVE_fnc_hashSet;
-[O_SLOArmy_WDL_mappings,"GroupFactionTypes", O_SLOArmy_WDL_typeMappings] call ALiVE_fnc_hashSet;
-[O_SLOArmy_WDL_mappings,"Groups", O_SLOArmy_WDL_factionCustomGroups] call ALiVE_fnc_hashSet;
-
-[ALiVE_factionCustomMappings,"O_SLOArmy_WDL", O_SLOArmy_WDL_mappings] call ALiVE_fnc_hashSet;
-*/
-/*
- * CQB houses
- */
  
 ALiVE_MIL_CQB_STRATEGICHOUSES = 
 [
@@ -276,17 +218,6 @@ ALiVE_PLACEMENT_GROUPBLACKLIST =
 	"OI_diverTeam_SDV",
 	"BUS_TankPlatoon_AA",
 	"BUS_MechInf_AA"
-	/*,
-	"b_swedenarmy_infantry_infantry_section_engineers_wdl",
-	"b_swedenarmy_infantry_infantry_section_eod_wdl",
-	"b_swedenarmy_infantry_recon_scouts_wdl",
-	"b_swedenarmy_infantry_assault_amfibie_section_wdl",
-	"b_swedenarmy_infantry_assault_amfibie_group_wdl",
-	"b_swedenarmy_specops_attack_diving_team_wdl",
-	"b_bswedenarmywdl_specops_attack_diving_team_suface",
-	"b_swedenarmy_mechanized_mechanized_recon_section_wdl",
-	"b_swedenarmy_mechanized_lkv90_section_wdl"
-	*/
 ];
  
 /*
@@ -340,14 +271,12 @@ ALIVE_sideDefaultAirTransport = [] call ALIVE_fnc_hashCreate;
  */
  
 ALIVE_factionDefaultSupports = [] call ALIVE_fnc_hashCreate;
-[ALIVE_factionDefaultSupports, "O_SLOArmy_WDL" ,["O_SLOArmy_Ural_Ammo_WDL_01","O_SLOArmy_Ural_Refuel_WDL_01","O_SLOArmy_UAZ_469_Medevac_WDL_01","O_SLOArmy_Ural_Repair_WDL_01","O_SLOArmy_BMP_2Ambulance_WDL_01","O_SLOArmy_UAZ_469_Open_WDL_01","O_SLOArmy_Ural_Open_WDL_01"]] call ALIVE_fnc_hashSet;
-[ALIVE_factionDefaultSupports, "B_SwedenArmy_WDL" , ["B_SwedenArmy_HEMTT_Ammo_WDL_01","B_SwedenArmy_HEMTT_Fuel_WDL_01","B_SwedenArmy_HRMTT_Medical_WDL_01","B_SwedenArmy_HEMTT_Repair_WDL_01","B_SwedenArmy_MTVR_WDL_01"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultSupports, "sfp_swe_2015", ["B_T_Truck_01_ammo_F","B_T_Truck_01_fuel_F","sfp_tgb1314","B_T_Truck_01_Repair_F","sfp_tgb20"]] call ALIVE_fnc_hashSet;
 
 [ALIVE_factionDefaultSupports, "OPF_F",["O_SLOArmy_Ural_Ammo_WDL_01","O_SLOArmy_Ural_Refuel_WDL_01","O_SLOArmy_UAZ_469_Medevac_WDL_01","O_SLOArmy_Ural_Repair_WDL_01","O_SLOArmy_BMP_2Ambulance_WDL_01","O_SLOArmy_UAZ_469_Open_WDL_01","O_SLOArmy_Ural_Open_WDL_01"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultSupports, "OPF_G_F", ["O_G_Offroad_01_armed_F","O_G_Van_01_fuel_F","O_G_Van_01_transport_F"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultSupports, "IND_F", ["I_Truck_02_ammo_F","I_Truck_02_box_F","I_Truck_02_fuel_F","I_Truck_02_medical_F","I_Truck_02_covered_F","I_Truck_02_transport_F"]] call ALIVE_fnc_hashSet;
-[ALIVE_factionDefaultSupports, "BLU_F", ["B_SwedenArmy_HEMTT_Ammo_WDL_01","B_SwedenArmy_HEMTT_Fuel_WDL_01","B_SwedenArmy_HRMTT_Medical_WDL_01","B_SwedenArmy_HEMTT_Repair_WDL_01","B_SwedenArmy_MTVR_WDL_01"]] call ALIVE_fnc_hashSet;
+[ALIVE_factionDefaultSupports, "BLU_F", ["B_Truck_01_ammo_F","B_Truck_01_fuel_F","B_Truck_01_medical_F","B_Truck_01_Repair_F","B_Truck_01_transport_F","B_Truck_01_covered_F"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultSupports, "BLU_G_F", ["B_G_Van_01_fuel_F","B_G_Van_01_transport_F"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultSupports, "CIV_F", ["C_Van_01_box_F","C_Van_01_transport_F","C_Van_01_fuel_F"]] call ALIVE_fnc_hashSet;
  
@@ -356,13 +285,11 @@ ALIVE_factionDefaultSupports = [] call ALIVE_fnc_hashCreate;
  */
  
 ALIVE_factionDefaultSupplies = [] call ALIVE_fnc_hashCreate;
-[ALIVE_factionDefaultSupplies, "O_SLOArmy_WDL" ["O_SLOArmy_WDL_AmmoBox","O_SLOArmy_WDL_WeaponsBox","O_SLOArmy_WDL_LaunchersBox","O_SLOArmy_WDL_UniformBox","O_SLOArmy_WDL_SupportBox","O_SLOArmy_WDL_SupplyBox"]] call ALIVE_fnc_hashSet;;
 [ALIVE_factionDefaultSupplies, "sfp_swe_2015" , ["sfp_ammobox_container_2015","ACE_medicalSupplyCrate","ACE_medicalSupplyCrate_advanced", "ACE_Box_Misc","Box_NATO_AmmoOrd_F","sfp_ammocrate_556","sfp_ammocrate_127","sfp_rbs17_missile_container"]] call ALIVE_fnc_hashSet;;
-[ALIVE_factionDefaultSupplies, "B_SwedenArmy_WDL" , ["B_SwedenArmy_WDL_AmmoBox","B_SwedenArmy_WDL_WeaponsBox","B_SwedenArmy_WDL_LaunchersBox", "B_SwedenArmy_WDL_UniformBox","B_SwedenArmy_WDL_SupportBox","B_SwedenArmy_WDL_SupplyBox"]] call ALIVE_fnc_hashSet;;
 [ALIVE_factionDefaultSupplies, "OPF_F", ["O_SLOArmy_WDL_AmmoBox","O_SLOArmy_WDL_WeaponsBox","O_SLOArmy_WDL_LaunchersBox","O_SLOArmy_WDL_SupportBox","O_SLOArmy_WDL_SupplyBox"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultSupplies, "OPF_G_F", ["Box_East_Ammo_F","Box_East_AmmoOrd_F","Box_East_Grenades_F","Box_East_Support_F","Box_East_Wps_F","Box_East_WpsLaunch_F","Box_East_WpsSpecial_F"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultSupplies, "IND_F", ["Box_IND_Ammo_F","Box_IND_AmmoOrd_F","Box_IND_Grenades_F","Box_IND_Support_F","Box_IND_Wps_F","Box_IND_WpsLaunch_F","Box_IND_WpsSpecial_F"]] call ALIVE_fnc_hashSet;
-[ALIVE_factionDefaultSupplies, "BLU_F", ["B_SwedenArmy_WDL_AmmoBox","B_SwedenArmy_WDL_WeaponsBox","B_SwedenArmy_WDL_LaunchersBox", "B_SwedenArmy_WDL_UniformBox","B_SwedenArmy_WDL_SupportBox","B_SwedenArmy_WDL_SupplyBox"]] call ALIVE_fnc_hashSet;
+[ALIVE_factionDefaultSupplies, "BLU_F", ["Box_NATO_Ammo_F","Box_NATO_AmmoOrd_F","Box_NATO_Grenades_F","Box_NATO_Support_F","Box_NATO_Wps_F","Box_NATO_WpsLaunch_F","Box_NATO_WpsSpecial_F"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultSupplies, "BLU_G_F", ["Box_IND_Ammo_F","Box_IND_AmmoOrd_F","Box_IND_Grenades_F","Box_IND_Support_F","Box_IND_Wps_F","Box_IND_WpsLaunch_F","Box_IND_WpsSpecial_F"]] call ALIVE_fnc_hashSet;
  
 /*
@@ -370,13 +297,11 @@ ALIVE_factionDefaultSupplies = [] call ALIVE_fnc_hashCreate;
  */
  
 ALIVE_factionDefaultTransport = [] call ALIVE_fnc_hashCreate;
-[ALIVE_factionDefaultTransport, "O_SLOArmy_WDL", ["O_SLOArmy_UAZ_469_Open_WDL_01","O_SLOArmy_Ural_Open_WDL_01"] call ALIVE_fnc_hashSet;
-[ALIVE_factionDefaultTransport, "B_SwedenArmy_WDL", ["B_SwedenArmy_MTVR_WDL_01","B_SwedenArmy_HEMTT_Open_WDL_01"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultTransport, "sfp_swe_2015", ["sfp_tgb20","sfp_tgb13_ksp58"]] call ALIVE_fnc_hashSet;
-[ALIVE_factionDefaultTransport, "OPF_F", ["O_SLOArmy_UAZ_469_Open_WDL_01","O_SLOArmy_Ural_Open_WDL_01"]] call ALIVE_fnc_hashSet;
+[ALIVE_factionDefaultTransport, "OPF_F", ["O_Truck_02_transport_F","O_Truck_02_covered_F"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultTransport, "OPF_G_F", ["O_G_Van_01_transport_F"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultTransport, "IND_F", ["I_Truck_02_covered_F","I_Truck_02_transport_F"]] call ALIVE_fnc_hashSet;
-[ALIVE_factionDefaultTransport, "BLU_F", ["B_SwedenArmy_MTVR_WDL_01","B_SwedenArmy_HEMTT_Open_WDL_01"]] call ALIVE_fnc_hashSet;
+[ALIVE_factionDefaultTransport, "BLU_F", ["B_Truck_01_transport_F","B_Truck_01_covered_F"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultTransport, "BLU_G_F", ["B_G_Van_01_transport_F"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultTransport, "CIV_F", ["C_Van_01_transport_F"]] call ALIVE_fnc_hashSet;
  
@@ -385,13 +310,11 @@ ALIVE_factionDefaultTransport = [] call ALIVE_fnc_hashCreate;
  */
  
 ALIVE_factionDefaultAirTransport = [] call ALIVE_fnc_hashCreate;
-[ALIVE_factionDefaultAirTransport, "O_SLOArmy_WDL" , ["O_SLOArmy_Mi8_MTV3_WDL_01", "O_SLOArmy_Mi_24P_WDL_01","O_SLOArmy_Mi_24V_WDL_01","O_SLOArmy_Mi6A_VIV_WDL_01","O_SLOArmy_KA_60_WDL_01"]] call ALIVE_fnc_hashSet;
-[ALIVE_factionDefaultAirTransport, "B_SwedenArmy_WDL", ["B_SwedenArmy_HKP_20_WDL_01","B_SwedenArmyWDL_Hkp_4_01","B_SwedenArmy_TP_84_Hercules_Transport_WDL_01"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultAirTransport, "sfp_swe_2015", ["sfp_hkp4_2015","sfp_hkp16","sfp_tp84_2015"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultAirTransport, "OPF_F", ["O_Heli_Attack_02_F","O_Heli_Light_02_F"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultAirTransport, "OPF_G_F", ["I_Heli_light_03_unarmed_F"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultAirTransport, "IND_F", ["I_Heli_light_03_unarmed_F","I_Heli_Transport_02_F"]] call ALIVE_fnc_hashSet;
-[ALIVE_factionDefaultAirTransport, "BLU_F", ["sfp_hkp4_2015","sfp_hkp16"]] call ALIVE_fnc_hashSet;
+[ALIVE_factionDefaultAirTransport, "BLU_F", ["B_Heli_Transport_01_camo_F","B_Heli_Transport_01_camo_F"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultAirTransport, "BLU_G_F", ["I_Heli_light_03_unarmed_F"]] call ALIVE_fnc_hashSet;
 [ALIVE_factionDefaultAirTransport, "CIV_F", []] call ALIVE_fnc_hashSet;
  
